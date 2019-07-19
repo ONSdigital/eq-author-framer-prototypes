@@ -1,0 +1,914 @@
+{
+  "questionnaire": {
+    "theme": "default",
+    "metadata": [
+      {
+        "alias": "Start Date",
+        "dateValue": null,
+        "id": "312",
+        "key": "ref_p_start_date",
+        "languageValue": null,
+        "regionValue": null,
+        "textValue": "2019-03-21",
+        "type": "Date"
+      },
+      {
+        "alias": "End Date",
+        "dateValue": null,
+        "id": "313",
+        "key": "ref_p_end_date",
+        "languageValue": null,
+        "regionValue": null,
+        "textValue": "2019-06-30",
+        "type": "Date"
+      },
+      {
+        "alias": "Trad As",
+        "dateValue": null,
+        "id": "325",
+        "key": "trad_as",
+        "languageValue": null,
+        "regionValue": null,
+        "textValue": "ESSENTIAL ENTERPRISE LTD.",
+        "type": "Text"
+      },
+      {
+        "id": "migrated-md-0",
+        "key": "ru_name",
+        "alias": "Ru Name",
+        "type": "Text",
+        "textValue": "ESSENTIAL ENTERPRISE LTD."
+      },
+      {
+        "id": "migrated-md-1",
+        "key": "period_id",
+        "alias": "Period Id",
+        "type": "Text",
+        "textValue": "201605"
+      },
+      {
+        "id": "migrated-md-2",
+        "key": "employmentDate",
+        "alias": "Employment Date",
+        "type": "Date",
+        "dateValue": "2016-06-10"
+      }
+    ],
+    "version": 8,
+    "summary": true,
+    "createdAt": "2019-03-27T00:00:00.000Z",
+    "sections": [
+      {
+        "alias": null,
+        "id": "1193",
+        "introductionContent": null,
+        "introductionTitle": null,
+        "pages": [
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": "Date Q",
+            "answers": [
+              {
+                "description": "",
+                "guidance": "",
+                "id": "6029",
+                "label": "",
+                "mutuallyExclusiveOption": null,
+                "options": [
+                  {
+                    "additionalAnswer": null,
+                    "description": "",
+                    "id": "7540",
+                    "label": "Yes",
+                    "qCode": "",
+                    "value": ""
+                  },
+                  {
+                    "additionalAnswer": null,
+                    "description": "",
+                    "id": "7541",
+                    "label": "No",
+                    "qCode": "",
+                    "value": ""
+                  }
+                ],
+                "properties": { "required": true },
+                "qCode": "",
+                "type": "Radio",
+                "validation": {}
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": null,
+            "definitionLabel": null,
+            "description": "",
+            "guidance": null,
+            "id": "4751",
+            "pageType": "QuestionPage",
+            "routing": {
+              "id": "30e6a332-5f37-4ac5-b789-d3db3d91b1f3",
+              "else": {
+                "id": "4c9c5d3a-9a8c-4dc8-9da3-8c1653effbdc",
+                "sectionId": "1194"
+              },
+              "rules": [
+                {
+                  "id": "b3f67e92-a82a-4866-b763-afb7ef2b377a",
+                  "destination": {
+                    "id": "7b219648-90eb-4de7-8b88-bb298452b162",
+                    "logical": "NextPage"
+                  },
+                  "expressionGroup": {
+                    "id": "9ff11287-a6b7-4296-b023-748196b000de",
+                    "operator": "And",
+                    "expressions": [
+                      {
+                        "id": "512dae18-04b7-4277-8801-06598d44eb37",
+                        "condition": "OneOf",
+                        "left": {
+                          "type": "Answer",
+                          "answerId": "6029",
+                          "nullReason": ""
+                        },
+                        "right": {
+                          "type": "SelectedOptions",
+                          "optionIds": ["7541"]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "title": "<p>Are you able to report for the period <span data-piped=\"metadata\" data-id=\"312\">[Start Date]</span> to <span data-piped=\"metadata\" data-id=\"313\">[End Date]</span>?</p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "totalValidation": null
+          },
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": null,
+            "answers": [
+              {
+                "childAnswers": [
+                  { "id": "6030from", "label": "Period from" },
+                  { "id": "6030to", "label": "Period to" }
+                ],
+                "description": "",
+                "guidance": "",
+                "id": "6030",
+                "label": "Period from",
+                "properties": { "required": true },
+                "qCode": "",
+                "type": "DateRange",
+                "validation": {
+                  "earliestDate": {
+                    "previousAnswer": null,
+                    "metadata": null,
+                    "custom": "2019-03-31",
+                    "enabled": true,
+                    "entityType": "Custom",
+                    "id": "7128",
+                    "offset": { "unit": "Days", "value": 31 },
+                    "relativePosition": "Before"
+                  },
+                  "latestDate": {
+                    "previousAnswer": null,
+                    "metadata": null,
+                    "custom": "2019-06-30",
+                    "enabled": true,
+                    "entityType": "Custom",
+                    "id": "7129",
+                    "offset": { "unit": "Days", "value": 31 },
+                    "relativePosition": "After"
+                  },
+                  "maxDuration": {
+                    "duration": { "unit": "Days", "value": 106 },
+                    "enabled": true,
+                    "id": "7127"
+                  },
+                  "minDuration": {
+                    "duration": { "unit": "Days", "value": 76 },
+                    "enabled": true,
+                    "id": "7126"
+                  }
+                },
+                "secondaryLabel": "Period to"
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": null,
+            "definitionLabel": null,
+            "description": "",
+            "guidance": null,
+            "id": "4752",
+            "pageType": "QuestionPage",
+            "routing": null,
+            "title": "<p>For which period are you able to report?</p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "totalValidation": null
+          }
+        ],
+        "title": "<p>Reporting period</p>"
+      },
+      {
+        "alias": null,
+        "id": "1194",
+        "introductionContent": "<p>This section covers anything your business holds that is not related to dwellings.</p>",
+        "introductionTitle": "<p>Relating to anything other than dwellings</p>",
+        "pages": [
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": "Materials, stores, and fuel",
+            "answers": [
+              {
+                "description": "Figures can be entered rounded (e.g. 56,000) or in full (e.g. 56,234.33). Do not enter ‘56’ for £56,000.",
+                "guidance": "",
+                "id": "6032",
+                "label": "Value of materials, stores, and fuel stocks at start of period",
+                "properties": { "decimals": 2, "required": true },
+                "qCode": "",
+                "type": "Currency",
+                "validation": {
+                  "maxValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7107",
+                    "inclusive": false
+                  },
+                  "minValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7106",
+                    "inclusive": false
+                  }
+                },
+                "secondaryLabel": null
+              },
+              {
+                "description": "",
+                "guidance": "",
+                "id": "6031",
+                "label": "Value of materials, stores, and fuel stocks at end of period",
+                "properties": { "decimals": 2, "required": true },
+                "qCode": "",
+                "type": "Currency",
+                "validation": {
+                  "maxValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7121",
+                    "inclusive": false
+                  },
+                  "minValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7120",
+                    "inclusive": false
+                  }
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": null,
+            "definitionLabel": null,
+            "description": "",
+            "guidance": "<p><strong>Include</strong></p><ul><li>Raw materials and components purchased for incorporation into products for sale</li><li>Consumable stores</li><li>Semi-processed goods</li><li>Office supplies (including stationery)and packaging materials</li><li> All stocks owned and either held by you or currently in transit within the United Kingdom </li><li>Duty for dutiable goods held out of bond</li><li>The value of any goods let out on hire, only if they were charged to current account when acquired and do not rank as capital items for taxation purposes</li></ul><p><strong>Exclude</strong></p><ul><li>VAT</li><li>Stocks you hold that do not belong to you</li><li>Duty on stocks held in bond</li></ul>",
+            "id": "4753",
+            "pageType": "QuestionPage",
+            "routing": null,
+            "title": "<p>What was the value of stocks held for <em>materials, stores, and fuel</em> (net of progress payments on long-term contracts)?</p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": true,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "totalValidation": {
+              "id": "migrated-4753",
+              "enabled": false,
+              "entityType": "Custom",
+              "condition": "Equal",
+              "previousAnswer": null,
+              "custom": null
+            }
+          },
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": "Work in progress",
+            "answers": [
+              {
+                "description": "Figures can be entered rounded (e.g. 56,000) or in full (e.g. 56,234.33). Do not enter ‘56’ for £56,000.",
+                "guidance": "",
+                "id": "6034",
+                "label": "Value of work in progress at start of period",
+                "properties": { "decimals": 2, "required": true },
+                "qCode": "",
+                "type": "Currency",
+                "validation": {
+                  "maxValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7105",
+                    "inclusive": false
+                  },
+                  "minValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7104",
+                    "inclusive": false
+                  }
+                },
+                "secondaryLabel": null
+              },
+              {
+                "description": "",
+                "guidance": "",
+                "id": "6033",
+                "label": "Value of work in progress at end of period",
+                "properties": { "decimals": 2, "required": true },
+                "qCode": "",
+                "type": "Currency",
+                "validation": {
+                  "maxValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7103",
+                    "inclusive": false
+                  },
+                  "minValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7102",
+                    "inclusive": false
+                  }
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": "<p>&#x27;Work in progress&#x27; consists of goods and services that have been partially processed, fabricated or assembled by the producer but are not usually sold or turned over to others without further processing. </p>",
+            "definitionLabel": "What is 'work in progress'?",
+            "description": "",
+            "guidance": "<p>Include</p><ul><li>Products that you own in intermediate stages of completion (even if not held by you)</li><li>Long term business contract balances in line with UK Generally Accepted Accountancy Practice (GAAP) or International GAAP</li><li>Show houses completed but not yet sold</li><li>Buildings for sale</li><li>Houses taken in part exchange</li><li>Vehicles, plant or machinery, etc. bought for resale</li><li> All stocks owned and either held by you or currently in transit within the United Kingdom </li><li>Duty for dutiable goods held out of bond</li><li>The value of any goods let out on hire, only if they were charged to current account when acquired and do not rank as capital items for taxation purposes</li></ul><p>Exclude</p><ul><li>VAT</li><li>Stocks you hold that do not belong to you</li><li>Duty on stocks held in bond</li><li>Products in intermediate stages of completion that do not belong to you </li></ul>",
+            "id": "4754",
+            "pageType": "QuestionPage",
+            "routing": null,
+            "title": "<p>What was the value of stocks held for <em>work in progress and goods on hand for sale</em> (net of progress payments on long-term contracts)?</p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": true,
+            "definitionEnabled": true,
+            "additionalInfoEnabled": false,
+            "totalValidation": {
+              "id": "migrated-4754",
+              "enabled": false,
+              "entityType": "Custom",
+              "condition": "Equal",
+              "previousAnswer": null,
+              "custom": null
+            }
+          },
+          {
+            "id": "04bc6c19-a501-4422-9efd-cc5675366987",
+            "title": "<p>For the <em>start of the period</em>, we calculate the total value of stocks, relating to anything other than dwellings, to be <span data-piped=\"variable\" data-id=\"1\">[Total]</span></p>",
+            "pageType": "CalculatedSummaryPage",
+            "sectionId": "1194",
+            "alias": null,
+            "totalTitle": "<p>Total value of stocks, relating to anything other than dwellings, at the start of the period</p>",
+            "summaryAnswers": ["6032", "6034"]
+          },
+          {
+            "id": "b7291e9e-89bb-4876-81f8-1f194086569c",
+            "title": "<p>For the <em>end of the period</em>, we calculate the total value of stocks, relating to anything other than dwellings, to be <span data-piped=\"variable\" data-id=\"1\">[Total]</span></p>",
+            "pageType": "CalculatedSummaryPage",
+            "sectionId": "1194",
+            "alias": null,
+            "totalTitle": "<p>Total value of stocks, relating to anything other than dwellings, at the end of the period</p>",
+            "summaryAnswers": ["6031", "6033"]
+          }
+        ],
+        "title": "<p>Relating to anything other than dwellings</p>"
+      },
+      {
+        "alias": null,
+        "id": "1195",
+        "introductionContent": "<p>This section covers anything your business holds that is relating to dwellings.</p>",
+        "introductionTitle": "<p>Relating to dwellings</p>",
+        "pages": [
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": "Materials, stores, and fuel",
+            "answers": [
+              {
+                "description": "Figures can be entered rounded (e.g. 56,000) or in full (e.g. 56,234.33). Do not enter ‘56’ for £56,000.",
+                "guidance": "",
+                "id": "6038",
+                "label": "Value of materials, stores, and fuel at start of period",
+                "properties": { "decimals": 2, "required": true },
+                "qCode": "",
+                "type": "Currency",
+                "validation": {
+                  "maxValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7115",
+                    "inclusive": false
+                  },
+                  "minValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7114",
+                    "inclusive": false
+                  }
+                },
+                "secondaryLabel": null
+              },
+              {
+                "description": "",
+                "guidance": "",
+                "id": "6037",
+                "label": "Value of materials, stores, and fuel at end of period",
+                "properties": { "decimals": 2, "required": true },
+                "qCode": "",
+                "type": "Currency",
+                "validation": {
+                  "maxValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7113",
+                    "inclusive": false
+                  },
+                  "minValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7112",
+                    "inclusive": false
+                  }
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": null,
+            "definitionLabel": null,
+            "description": "",
+            "guidance": "<p>Include</p><ul><li>Raw materials and components purchased for incorporation into products for sale</li><li>Consumable stores</li><li>Semi-processed goods</li><li>Office supplies (including stationery)and packaging materials</li><li> All stocks owned and either held by you or currently in transit within the United Kingdom </li><li>Duty for dutiable goods held out of bond</li><li>The value of any goods let out on hire, only if they were charged to current account when acquired and do not rank as capital items for taxation purposes</li></ul><p>Exclude</p><ul><li>VAT</li><li>Stocks you hold that do not belong to you</li><li>Duty on stocks held in bond</li></ul>",
+            "id": "4756",
+            "pageType": "QuestionPage",
+            "routing": null,
+            "title": "<p>What was the value of stocks held for <em>materials, stores, and fuel</em> (net of progress payments on long-term contracts)?</p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": true,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "totalValidation": {
+              "id": "migrated-4756",
+              "enabled": false,
+              "entityType": "Custom",
+              "condition": "Equal",
+              "previousAnswer": null,
+              "custom": null
+            }
+          },
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": "Work in progress",
+            "answers": [
+              {
+                "description": "Figures can be entered rounded (e.g. 56,000) or in full (e.g. 56,234.33). Do not enter ‘56’ for £56,000.",
+                "guidance": "",
+                "id": "6040",
+                "label": "Value of work in progress at start of period",
+                "properties": { "decimals": 2, "required": true },
+                "qCode": "",
+                "type": "Currency",
+                "validation": {
+                  "maxValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7119",
+                    "inclusive": false
+                  },
+                  "minValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7118",
+                    "inclusive": false
+                  }
+                },
+                "secondaryLabel": null
+              },
+              {
+                "description": "",
+                "guidance": "",
+                "id": "6039",
+                "label": "Value of work in progress at end of period",
+                "properties": { "decimals": 2, "required": true },
+                "qCode": "",
+                "type": "Currency",
+                "validation": {
+                  "maxValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7117",
+                    "inclusive": false
+                  },
+                  "minValue": {
+                    "previousAnswer": null,
+                    "custom": null,
+                    "enabled": false,
+                    "entityType": "Custom",
+                    "id": "7116",
+                    "inclusive": false
+                  }
+                },
+                "secondaryLabel": null
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": "<p>&#x27;Work in progress&#x27; consists of goods and services that have been partially processed, fabricated or assembled by the producer but are not usually sold or turned over to others without further processing.  </p>",
+            "definitionLabel": "What is 'work in progress'?",
+            "description": "",
+            "guidance": "<p>Include</p><ul><li>Products that you own in intermediate stages of completion (even if not held by you)</li><li>Long term business contract balances in line with UK Generally Accepted Accountancy Practice (GAAP) or International GAAP</li><li>Show houses completed but not yet sold</li><li>Buildings for sale</li><li>Houses taken in part exchange</li><li>Vehicles, plant or machinery, etc. bought for resale</li><li> All stocks owned and either held by you or currently in transit within the United Kingdom </li><li>Duty for dutiable goods held out of bond</li><li>The value of any goods let out on hire, only if they were charged to current account when acquired and do not rank as capital items for taxation purposes</li></ul><p>Exclude</p><ul><li>VAT</li><li>Stocks you hold that do not belong to you</li><li>Duty on stocks held in bond</li><li>Products in intermediate stages of completion that do not belong to you </li></ul>",
+            "id": "4757",
+            "pageType": "QuestionPage",
+            "routing": null,
+            "title": "<p>What was the value of stocks held for <em>work in progress and goods on hand for sale</em> (net of progress payments on long-term contracts)?</p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": true,
+            "definitionEnabled": true,
+            "additionalInfoEnabled": false,
+            "totalValidation": {
+              "id": "migrated-4757",
+              "enabled": false,
+              "entityType": "Custom",
+              "condition": "Equal",
+              "previousAnswer": null,
+              "custom": null
+            }
+          },
+          {
+            "id": "ea8ecfd4-27f0-48ae-903e-90d6775b3a99",
+            "title": "<p>For the <em>start of the period</em>, we calculate the total value of stocks, relating to dwellings, to be <span data-piped=\"variable\" data-id=\"1\">[Total]</span></p>",
+            "pageType": "CalculatedSummaryPage",
+            "sectionId": "1195",
+            "alias": null,
+            "totalTitle": "<p>Total value of stocks, relating to dwellings, at the start of the period</p>",
+            "summaryAnswers": ["6038", "6040"]
+          },
+          {
+            "id": "24956ac5-c8fe-4c3a-a1d3-2153e5fda205",
+            "title": "<p>For the <em>end of the period</em>, we calculate the total value of stocks, relating to dwellings, to be <span data-piped=\"variable\" data-id=\"1\">[Total]</span></p>",
+            "pageType": "CalculatedSummaryPage",
+            "sectionId": "1195",
+            "alias": null,
+            "totalTitle": "<p>Total value of stocks, relating to dwellings, at the end of the period</p>",
+            "summaryAnswers": ["6037", "6039"]
+          },
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": null,
+            "answers": [
+              {
+                "description": "",
+                "guidance": "",
+                "id": "6044",
+                "label": "",
+                "mutuallyExclusiveOption": null,
+                "options": [
+                  {
+                    "additionalAnswer": null,
+                    "description": "",
+                    "id": "7542",
+                    "label": "Yes",
+                    "qCode": "",
+                    "value": ""
+                  },
+                  {
+                    "additionalAnswer": null,
+                    "description": "",
+                    "id": "7543",
+                    "label": "No",
+                    "qCode": "",
+                    "value": ""
+                  }
+                ],
+                "properties": { "required": true },
+                "qCode": "",
+                "type": "Radio",
+                "validation": {}
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": null,
+            "definitionLabel": null,
+            "description": "",
+            "guidance": null,
+            "id": "4759",
+            "pageType": "QuestionPage",
+            "routing": null,
+            "title": "<p>Are the end of period figures you have provided estimated?</p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "totalValidation": null
+          }
+        ],
+        "title": "<p>Relating to dwellings</p>"
+      },
+      {
+        "alias": null,
+        "id": "1196",
+        "introductionContent": null,
+        "introductionTitle": null,
+        "pages": [
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": null,
+            "answers": [
+              {
+                "description": "",
+                "guidance": "",
+                "id": "6098",
+                "label": "",
+                "mutuallyExclusiveOption": null,
+                "options": [
+                  {
+                    "additionalAnswer": null,
+                    "description": "",
+                    "id": "7617",
+                    "label": "Yes",
+                    "qCode": "",
+                    "value": ""
+                  },
+                  {
+                    "additionalAnswer": null,
+                    "description": "",
+                    "id": "7618",
+                    "label": "No",
+                    "qCode": "",
+                    "value": ""
+                  }
+                ],
+                "properties": { "required": true },
+                "qCode": "",
+                "type": "Radio",
+                "validation": {}
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": null,
+            "definitionLabel": null,
+            "description": "<p>Please note: what constitutes a ‘significant change’ is dependent on your own interpretation in relation to <span data-piped=\"metadata\" data-id=\"325\">[Trad As]</span>’s figures from the previous reporting period and the same reporting period last year.</p><p>This information will help us to validate your data and should reduce the need to query any figures with you.</p>",
+            "guidance": null,
+            "id": "4804",
+            "pageType": "QuestionPage",
+            "routing": {
+              "else": {
+                "sectionId": null,
+                "pageId": "4760",
+                "id": "125",
+                "logical": null
+              },
+              "id": "63",
+              "rules": [
+                {
+                  "destination": {
+                    "sectionId": null,
+                    "pageId": null,
+                    "id": "126",
+                    "logical": "NextPage"
+                  },
+                  "expressionGroup": {
+                    "expressions": [
+                      {
+                        "condition": "OneOf",
+                        "id": "67",
+                        "left": {
+                          "__typename": "MultipleChoiceAnswer",
+                          "id": "6098",
+                          "options": [{ "id": "7617" }, { "id": "7618" }],
+                          "type": "Answer",
+                          "answerId": "6098"
+                        },
+                        "right": {
+                          "__typename": "SelectedOptions2",
+                          "options": [{ "id": "7617", "label": "Yes" }],
+                          "type": "SelectedOptions",
+                          "optionIds": ["7617"]
+                        }
+                      }
+                    ],
+                    "id": "63",
+                    "operator": "And"
+                  },
+                  "id": "63"
+                }
+              ]
+            },
+            "title": "<p>Did any significant changes occur to the total value of stocks for <span data-piped=\"metadata\" data-id=\"325\">[Trad As]</span>?</p>",
+            "descriptionEnabled": true,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "totalValidation": null
+          },
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": null,
+            "answers": [
+              {
+                "description": "",
+                "guidance": "",
+                "id": "6099",
+                "label": "",
+                "mutuallyExclusiveOption": null,
+                "options": [
+                  {
+                    "additionalAnswer": null,
+                    "description": "",
+                    "id": "7619",
+                    "label": "Start or end of long term project",
+                    "qCode": "",
+                    "value": ""
+                  },
+                  {
+                    "additionalAnswer": null,
+                    "description": null,
+                    "id": "7620",
+                    "label": "End of accounting period or financial year",
+                    "qCode": null,
+                    "value": null
+                  },
+                  {
+                    "additionalAnswer": null,
+                    "description": null,
+                    "id": "7621",
+                    "label": "Normal movement for the time of year",
+                    "qCode": null,
+                    "value": null
+                  },
+                  {
+                    "additionalAnswer": null,
+                    "description": null,
+                    "id": "7622",
+                    "label": "Change of business structure, merger or takeover",
+                    "qCode": null,
+                    "value": null
+                  },
+                  {
+                    "additionalAnswer": null,
+                    "description": null,
+                    "id": "7623",
+                    "label": "One off increase in stocks",
+                    "qCode": null,
+                    "value": null
+                  },
+                  {
+                    "additionalAnswer": null,
+                    "description": null,
+                    "id": "7624",
+                    "label": "Introduction or removal of new legislation or incentive",
+                    "qCode": null,
+                    "value": null
+                  },
+                  {
+                    "additionalAnswer": null,
+                    "description": null,
+                    "id": "7625",
+                    "label": "Other (for example, global economic conditions, leaving the EU)",
+                    "qCode": null,
+                    "value": null
+                  }
+                ],
+                "properties": { "required": true },
+                "qCode": "",
+                "type": "Checkbox",
+                "validation": {}
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": null,
+            "definitionLabel": null,
+            "description": "",
+            "guidance": null,
+            "id": "4805",
+            "pageType": "QuestionPage",
+            "routing": null,
+            "title": "<p>Please indicate the reasons for any changes in the total value of stocks for <span data-piped=\"metadata\" data-id=\"325\">[Trad As]</span></p>",
+            "descriptionEnabled": false,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "totalValidation": null
+          },
+          {
+            "additionalInfoContent": null,
+            "additionalInfoLabel": null,
+            "alias": "Comments",
+            "answers": [
+              {
+                "description": "",
+                "guidance": "",
+                "id": "6043",
+                "label": "Comments",
+                "properties": { "required": false },
+                "qCode": "",
+                "type": "TextArea",
+                "validation": {}
+              }
+            ],
+            "confirmation": null,
+            "definitionContent": "",
+            "definitionLabel": null,
+            "description": "<p> Include any unusual fluctuations in figures </p>",
+            "guidance": "",
+            "id": "4760",
+            "pageType": "QuestionPage",
+            "routing": null,
+            "title": "<p>Explain any differences between this quarter&#x27;s opening value and the previously returned closing value</p>",
+            "descriptionEnabled": true,
+            "guidanceEnabled": false,
+            "definitionEnabled": false,
+            "additionalInfoEnabled": false,
+            "totalValidation": null
+          }
+        ],
+        "title": "<p>Comments</p>"
+      }
+    ],
+    "createdBy": "10cd5569-f57e-472d-85a2-90e3e9745e19",
+    "legalBasis": "StatisticsOfTradeAct",
+    "updatedAt": "2019-06-19T07:51:17.178Z",
+    "id": "514",
+    "introduction": {
+      "id": "questionnaire-introduction",
+      "title": "<p>You are completing this for <span data-piped=\"metadata\" data-id=\"325\">trad_as</span> (<span data-piped=\"metadata\" data-id=\"migrated-md-0\">ru_name</span>)</p>",
+      "description": "<ul><li>This survey covers UK businesses. The business is the individual company partnership or sole proprietorship to which the questionnaire has been sent, unless specified otherwise.</li><li>You can provide informed estimates if actual figures aren’t available.</li><li>We will treat your data securely and confidentially.</li></ul>",
+      "legalBasis": "NOTICE_1",
+      "secondaryTitle": "<p>Information you need</p>",
+      "secondaryDescription": "<p>You can select the dates of the period you are reporting for, if the given dates are not appropriate.</p>",
+      "collapsibles": [
+        {
+          "id": "a934c148-a642-404e-a705-a973f56c54f3",
+          "title": "Value of stocks held for materials, stores, and fuel",
+          "description": "<p> <strong>Include</strong></p><ul><li>Raw materials and components purchased for incorporation into products for sale</li><li>Consumable stores</li><li>Semi-processed goods</li><li>Office supplies (including stationery)and packaging materials</li><li>All stocks owned; whether held by you or in transit in the UK or abroad</li><li>Duty for dutiable goods held out of bond</li><li>The value of any goods let out on hire, only if they were charged to current account when acquired and do not rank as capital items for taxation purposes</li></ul><p><strong>Exclude</strong></p><ul><li>VAT</li><li>Stocks you hold that do not belong to you</li><li>Duty on stocks held in bond</li></ul>"
+        },
+        {
+          "id": "7c5f6fc4-862e-4ca5-9c3f-1e7df59cd234",
+          "title": "Value of stocks held for work in progress",
+          "description": "<p> <strong>Include</strong></p><ul><li>Products that you own in intermediate stages of completion (even if not held by you)</li><li>Long term business contract balances in line with UK Generally Accepted Accountancy Practice (GAAP) or International GAAP</li><li>Show houses completed but not yet sold</li><li>Buildings for sale</li><li>Houses taken in part exchange</li><li>Vehicles, plant or machinery, etc. bought for resale</li><li>All stocks owned; whether held by you or in transit in the UK or abroad</li><li>Duty for dutiable goods held out of bond</li><li>The value of any goods let out on hire, only if they were charged to current account when acquired and do not rank as capital items for taxation purposes</li></ul><p><strong>Exclude</strong></p><ul><li>VAT</li><li>Stocks you hold that do not belong to you</li><li>Duty on stocks held in bond</li><li>Products in intermediate stages of completion that do not belong to you</li></ul>"
+        }
+      ],
+      "tertiaryTitle": "<p>How we use your data</p>",
+      "tertiaryDescription": "<p>The information supplied is used to estimate changes in stock levels which are used in the compilation of Gross Domestic Product (GDP), the total UK economic activity. GDP is used to measure the UK&#x27;s financial health and prosperity over time and in comparison to other countries. The results are used by the Bank of England and HM Treasury to monitor interest rates, inflation and in formulating financial policies (e.g. income, expenditure and taxation) for the UK.</p>"
+    },
+    "title": "Quarterly Stocks Survey 0033",
+    "type": "Business",
+    "navigation": false
+  }
+}
